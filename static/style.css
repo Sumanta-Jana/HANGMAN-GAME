@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #101d3a, #172b4d);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.game-container {
+    background: #ffffff;
+    color: #172b4d;
+    width: 850px;
+    max-width: 100%;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.3);
+}
+
+h1 {
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.game-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.hangman svg {
+    width: 220px;
+    height: 250px;
+}
+
+svg line, svg circle {
+    stroke: #172b4d;
+    stroke-width: 4;
+    fill: none;
+    stroke-linecap: round;
+}
+
+svg circle,
+svg #body,
+svg #left-arm,
+svg #right-arm,
+svg #left-leg,
+svg #right-leg {
+    visibility: hidden;
+}
+
+.game-info {
+    flex: 1;
+    min-width: 280px;
+}
+
+.word {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.letter {
+    border-bottom: 4px solid #2563eb;
+    width: 30px;
+    font-size: 25px;
+    font-weight: bold;
+    padding-bottom: 8px;
+}
+
+.keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7px;
+    margin: 20px 0;
+}
+
+.keyboard button {
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 7px;
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.keyboard button:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+}
+
+#restart {
+    background: #16a34a;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#message {
+    margin: 15px;
+}
+
+@media (max-width: 600px) {
+    .game-container {
+        padding: 20px 10px;
+    }
+
+    .game-content {
+        flex-direction: column;
+    }
+}

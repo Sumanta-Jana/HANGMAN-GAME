@@ -1,0 +1,11 @@
+
+WORDS = [
+    "PYTHON",
+    "COMPUTER",
+    "PROGRAMMING",
+    "JAVASCRIPT",
+    "DEVELOPER",
+    "HANGMAN",
+    "DATABASE",
+    "INTERNET"
+]

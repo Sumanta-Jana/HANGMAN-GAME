@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hangman Game</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="game-container">
+
+        <h1>🎮 HANGMAN GAME</h1>
+
+        <p class="subtitle">Guess the hidden word!</p>
+
+        <div class="game-content">
+
+            <div class="hangman">
+                <svg viewBox="0 0 200 220">
+
+                    <line x1="20" y1="200" x2="180" y2="200"/>
+                    <line x1="60" y1="200" x2="60" y2="20"/>
+                    <line x1="60" y1="20" x2="140" y2="20"/>
+                    <line x1="140" y1="20" x2="140" y2="45"/>
+
+                    <circle id="head" cx="140" cy="65" r="20"/>
+                    <line id="body" x1="140" y1="85" x2="140" y2="140"/>
+                    <line id="left-arm" x1="140" y1="100" x2="115" y2="125"/>
+                    <line id="right-arm" x1="140" y1="100" x2="165" y2="125"/>
+                    <line id="left-leg" x1="140" y1="140" x2="115" y2="175"/>
+                    <line id="right-leg" x1="140" y1="140" x2="165" y2="175"/>
+
+                </svg>
+            </div>
+
+            <div class="game-info">
+
+                <h2>Guess the Word</h2>
+
+                <div id="word" class="word"></div>
+
+                <p>Wrong Attempts:
+                    <span id="attempts">6</span>
+                </p>
+
+                <p>Guessed Letters:</p>
+
+                <div id="guessed"></div>
+
+                <div id="keyboard" class="keyboard"></div>
+
+                <h3 id="message"></h3>
+
+                <button id="restart">New Game</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
